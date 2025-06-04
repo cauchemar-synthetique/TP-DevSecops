@@ -96,7 +96,6 @@ git push origin main
 
 
 ```
-```
 REPONSE GRAB THE CODE
 
 ls -a
@@ -132,6 +131,7 @@ curl -X POST http://localhost:5000/login -d "username=nonexistent&password=whate
 ❌ Message : "Invalid username or password" ➜ ✔️
 
 -------------------------------------------------------------------------------------
+
 ```
 
 > Cette architecture de dossier est très classique pour un projet dév.
