@@ -94,10 +94,11 @@ git push origin main
 - un env file : `.env`
 - kom sa koa :
 
-```bash
-❯ ls app -a
-db  docker-compose.yml  Dockerfile  .env  requirements.txt  src
 ```
+
+ ls app -a
+db  docker-compose.yml  Dockerfile  .env  requirements.txt  src
+
 
 ```
 REPONSE GRAB THE CODE
@@ -135,7 +136,7 @@ curl -X POST http://localhost:5000/login -d "username=nonexistent&password=whate
 ❌ Message : "Invalid username or password" ➜ ✔️
 
 -------------------------------------------------------------------------------------
-
+```
 
 > Cette architecture de dossier est très classique pour un projet dév.
 
