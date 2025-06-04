@@ -41,16 +41,17 @@ Pour bosser, **je vous file un bout de code que j'ai écrit qui lance un ptite a
 
 🌞 **Balancez l'URL de ce dépôt `broken_webapp` dans le compte-rendu Markdown**
 
-- REPONSE 
+```
+REPONSE 
 
-- git clone https://gitlab.com/cauchemar/broken_webapp.git
-- cd broken_webapp/
-- vim README.md
-- git add README.md
+ git clone https://gitlab.com/cauchemar/broken_webapp.git
+ cd broken_webapp/
+ vim README.md
+ git add README.md
 git commit -m "Mise à jour du README : ajout de la date de clonage"
 git push origin main
   
-
+```
 
 
 ## 2. Grab the code
