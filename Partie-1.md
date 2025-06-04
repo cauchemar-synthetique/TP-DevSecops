@@ -207,7 +207,7 @@ sudo gitlab-runner register \
 - dans le menu latéral, allez dans la section `Settings > CI/CD > Runners`
 - vous devriez voir votre *Runner* qui s'est enregistré dans les `Project Runners`
 
-  ```
+```
  REPONSE Gitlab Runner
 
  dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
