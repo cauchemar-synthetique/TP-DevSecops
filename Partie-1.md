@@ -99,6 +99,44 @@ git push origin main
 db  docker-compose.yml  Dockerfile  .env  requirements.txt  src
 ```
 
+```
+REPONSE GRAB THE CODE
+
+ls -a
+db/ docker-compose.yml Dockerfile .env requirements.txt src/
+----------------------------------------------------------------------------------
+docker compose up -d --build
+----------------------------------------------------------------------------------
+DB_HOST=db
+DB_USER=broken_webapp
+DB_PASSWORD=meo
+DB_DATABASE=broken_webapp
+SECRET_KEY=devsecops-secret
+LISTEN_IP=0.0.0.0
+-----------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+
+INSERT INTO users (username, password) VALUES
+  ('leo', 'password123'),
+  ('cauchemar', 'password123');
+
+------------------------------------------------------------------------------------
+curl -X POST http://localhost:5000/login -d "username=leo&password=password123"
+Redirection vers /dashboard ➜
+
+curl -X POST http://localhost:5000/login -d "username=leo&password=wrongpassword"
+❌ Message : "Invalid username or password" ➜
+
+curl -X POST http://localhost:5000/login -d "username=nonexistent&password=whatever"
+❌ Message : "Invalid username or password" ➜ ✔️
+
+-------------------------------------------------------------------------------------
+
+
 > Cette architecture de dossier est très classique pour un projet dév.
 
 ## 3. Gitlab Runner
