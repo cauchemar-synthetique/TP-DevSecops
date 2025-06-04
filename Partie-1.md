@@ -94,12 +94,7 @@ git push origin main
 - un env file : `.env`
 - kom sa koa :
 
-```
 
- ls app -a
-db  docker-compose.yml  Dockerfile  .env  requirements.txt  src
-
-```
 ```
 REPONSE GRAB THE CODE
 
