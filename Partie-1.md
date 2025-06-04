@@ -206,6 +206,44 @@ sudo gitlab-runner register \
 - dans le menu latéral, allez dans la section `Settings > CI/CD > Runners`
 - vous devriez voir votre *Runner* qui s'est enregistré dans les `Project Runners`
 
+  ```
+ REPONSE Gitlab Runner
+
+ dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+systemctl enable docker
+systemctl start docker
+systemctl status docker
+docker run hello-world  
+
+----------------------------------------------------------------------------------------------------------
+
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh | bash
+dnf install gitlab-runner -y
+gitlab-runner --version  
+
+----------------------------------------------------------------------------------------------------------
+
+systemctl enable gitlab-runner
+systemctl start gitlab-runner
+systemctl status gitlab-runner
+
+----------------------------------------------------------------------------------------------------------
+
+gitlab-runner register
+
+Enter the GitLab instance URL: https://gitlab.com/
+Enter the registration token: glrt-XXXXXXX  # ← Ton vrai token
+Enter a description for the runner: rocky-runner-1
+Enter tags for the runner (comma-separated): docker
+Enter an executor: docker
+
+Enter the default Docker image: python:3.9
+
+------------------------------------------------------------------------------------------------------------ -
+
+```
+
 ## 4. First pipeline
 
 Allez, notre première *pipeline*. C'est un mot générique pour désigner un truc à exécuter automatiquement dans un dépôt git.
